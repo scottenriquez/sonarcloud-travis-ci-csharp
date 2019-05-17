@@ -1,0 +1,1 @@
+# sonarcloud-travis-ci-csharp

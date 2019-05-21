@@ -6,6 +6,6 @@ dotnet ../tools/sonar/SonarScanner.MSBuild.dll begin /o:"scottenriquez-github" /
 echo "Running build..."
 dotnet build SonarCloud.Travis.Integration.sln
 echo "Running tests..."
-dotnet test SonarCloud.Travis.Integration.Tests/SonarCloud.Travis.Integration.Tests.csproj
+dotnet test SonarCloud.Travis.Integration.Tests/SonarCloud.Travis.Integration.Tests.csproj --logger:trx
 echo "Executing MSBuild DLL end command..."
 dotnet ../tools/sonar/SonarScanner.MSBuild.dll end /d:sonar.login=${SONAR_TOKEN}
